@@ -6,7 +6,7 @@ We worked towards creating a compiler for a subset of the C language called nano
 
 a2: Lexical Analyzer using Flex\
 a3: Parser using Bison\
-a4: Machine-Independent Code Generator for nanoC using syntax-directed translation with Bison. Three-Address (intermediate) Code (TAC) used as target of translation.\
+a4: Machine-Independent Code Generator for nanoC using syntax-directed translation with Bison. Three-Address (intermediate) Code (TAC) used as target of translation
 
 Team Members: Saptarishi Dhanuka, Shivam Kedia
 
