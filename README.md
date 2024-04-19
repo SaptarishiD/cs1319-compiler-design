@@ -1,6 +1,6 @@
 # cs1319
 
-Code and assignment submissions for CS-1319 Operating Systems in Monsoon 2022 taught by Professor [Partha Pratim Das](https://www.iitkgp.ac.in/department/CS/faculty/cs-ppd)
+Code and assignment submissions for CS-1319 Programming Language Design and Implementation (Compiler Design) in Monsoon 2022 taught by Professor [Partha Pratim Das](https://www.iitkgp.ac.in/department/CS/faculty/cs-ppd)
 
 We worked towards creating a compiler for a subset of the C language called nanoC
 
