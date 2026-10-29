@@ -1,0 +1,42 @@
+[
+  {
+    "id": "title",
+    "text": "This is a tour of c s 13 19 compiler design: a compiler for nano C, a small subset of the C language, built by Saptarishi Dhanuka and Shivam Kedia for a course on programming language design and implementation."
+  },
+  {
+    "id": "map",
+    "text": "The repository has one folder per assignment. A1 is a warm-up on programming languages, and on how G C C compiles a small C program. A2 builds the lexer with Flex. A3 builds the parser with Bison. And A4 joins them into a translator that emits three-address code."
+  },
+  {
+    "id": "nanoc",
+    "text": "Nano C keeps just enough of C to be interesting: int, char and void, pointers, one-dimensional arrays, if-else, for loops, and functions. There are only seven keywords. We'll follow this little program through every stage."
+  },
+  {
+    "id": "lexer",
+    "text": "Stage one is the lexer. In the A2 Flex file, regular definitions describe keywords, identifiers, constants, string literals and punctuators. Flex compiles them into a scanner that turns our program into a stream of tokens. Comments and whitespace are dropped, and any character that matches nothing is reported as invalid input."
+  },
+  {
+    "id": "parser",
+    "text": "Stage two is the parser. In A3, the lexer returns token codes to Bison, and the grammar file encodes nano C. Expressions are layered by precedence: primary, postfix and unary, then multiplicative, additive, relational, equality, the logical operators, conditional, and finally assignment. Each reduction prints its rule, so parsing sum equals sum plus i climbs the whole ladder. When input breaks the grammar, the parser names the offending token."
+  },
+  {
+    "id": "symtab",
+    "text": "Stage three, in A4, adds meaning. Semantic actions in the Bison file fill a global symbol table, with a nested table for each function. The gentemp helper creates compiler temporaries named t zero zero zero zero, t zero zero zero one, and so on. Every instruction becomes a quad: an opcode, two arguments and a result, appended to one global quad array."
+  },
+  {
+    "id": "backpatch",
+    "text": "Control flow uses backpatching. An empty marker rule, M, records the index of the next quad. Boolean expressions carry a true list and a false list: jumps whose targets aren't known yet. Once the target is known, backpatch walks the list and fills each blank in."
+  },
+  {
+    "id": "demo",
+    "text": "Here is the translator's real output for our program. The loop test compares i with ten at quad five. If it holds, quad six jumps into the body at twelve, otherwise quad seven exits to the return at nineteen. The if inside the body falls back to the increment at quad eight, which then loops to the test at four. Twenty quads in all."
+  },
+  {
+    "id": "run",
+    "text": "To try it yourself, generate the scanner with flex and the parser with bison, compile with G C C, and pipe a nano C file into the translator. The Makefile wraps these steps, but expects gcc 13. One caveat: the translator currently crashes on functions with parameters, because new symtab never initialises its element count."
+  },
+  {
+    "id": "outro",
+    "text": "Lexer, parser, translator: a complete compiler front end for nano C, in about three and a half thousand lines of Flex, Bison and C."
+  }
+]

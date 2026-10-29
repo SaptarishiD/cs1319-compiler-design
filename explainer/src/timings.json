@@ -1,0 +1,52 @@
+{
+  "title": {
+    "voiceFrames": 499,
+    "leadInFrames": 18,
+    "durationInFrames": 547
+  },
+  "map": {
+    "voiceFrames": 620,
+    "leadInFrames": 18,
+    "durationInFrames": 668
+  },
+  "nanoc": {
+    "voiceFrames": 456,
+    "leadInFrames": 18,
+    "durationInFrames": 504
+  },
+  "lexer": {
+    "voiceFrames": 697,
+    "leadInFrames": 18,
+    "durationInFrames": 745
+  },
+  "parser": {
+    "voiceFrames": 889,
+    "leadInFrames": 18,
+    "durationInFrames": 937
+  },
+  "symtab": {
+    "voiceFrames": 778,
+    "leadInFrames": 18,
+    "durationInFrames": 826
+  },
+  "backpatch": {
+    "voiceFrames": 538,
+    "leadInFrames": 18,
+    "durationInFrames": 586
+  },
+  "demo": {
+    "voiceFrames": 686,
+    "leadInFrames": 18,
+    "durationInFrames": 734
+  },
+  "run": {
+    "voiceFrames": 713,
+    "leadInFrames": 18,
+    "durationInFrames": 761
+  },
+  "outro": {
+    "voiceFrames": 285,
+    "leadInFrames": 18,
+    "durationInFrames": 333
+  }
+}
